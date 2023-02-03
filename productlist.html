@@ -18,46 +18,63 @@
 
 <body>
     <main>
-        <h1>Puma</h1>
-        <div class="product_con">
-            <article class="product">
-                <img src="img/1533.webp" alt="">
-                <h3>Puma t-shirt, red</h3>
-                <p class="subtle">T-shirts | Puma</p>
-                <p class="price">DKK 400,-</p>
+        <template>
+            <h1>Puma</h1>
+            <div class="product_con">
+
+                <article class="product">
+                    <img src="img/1533.webp" alt="">
+                    <h3>Puma t-shirt, red</h3>
+                    <p class="subtle">T-shirts | Puma</p>
+                    <p class="price">DKK 400,-</p>
+                    <a href="product.html">Read more</a>
+                </article>
+
+                <article class="product sale">
+                    <img src="img/1533.webp" alt="">
+                    <h3>Puma t-shirt, red</h3>
+                    <p class="subtle">T-shirts | Puma</p>
+                    <p class="price">Prev, DKK 400,-</p>
+                    <div class="price_down">
+                        <p>Now DKK 200,-</p>
+                        <p>-50%</p>
+                    </div>
+                    <a href="product.html">Read more</a>
+                </article>
+
+                <article class="product soldout">
+                    <img src="img/1533.webp" alt="">
+                    <h3>Puma t-shirt, red</h3>
+                    <p class="subtle">T-shirts | Puma</p>
+                    <p class="price">DKK 400,-</p>
+                    <a href="product.html">Read more</a>
+                </article>
+
+                <article class="product sale soldout">
+                    <img src="img/1533.webp" alt="">
+                    <h3>Puma t-shirt, red</h3>
+                    <p class="subtle">T-shirts | Puma</p>
+                    <p class="price">Prev, DKK 400,-</p>
+                    <div class="price_down">
+                        <p>Now DKK 200,-</p>
+                        <p>-50%</p>
+                    </div>
+                    <a href="product.html">Read more</a>
+                </article>
+            </div>
+        </template>
+
+        <template id="producttemplate">
+            <article>
+                <img id="pic" src="img/1533.webp" alt="">
+                <h3 id="name">Puma t-shirt, red</h3>
+                <p id="brand" class="subtle">T-shirts | Puma</p>
+                <p id="price" class="price">DKK 400,-</p>
                 <a href="product.html">Read more</a>
             </article>
-            <article class="product sale">
-                <img src="img/1533.webp" alt="">
-                <h3>Puma t-shirt, red</h3>
-                <p class="subtle">T-shirts | Puma</p>
-                <p class="price">Prev, DKK 400,-</p>
-                <div class="price_down">
-                    <p>Now DKK 200,-</p>
-                    <p>-50%</p>
-                </div>
-                <a href="product.html">Read more</a>
-            </article>
-            <article class="product soldout">
-                <img src="img/1533.webp" alt="">
-                <h3>Puma t-shirt, red</h3>
-                <p class="subtle">T-shirts | Puma</p>
-                <p class="price">DKK 400,-</p>
-                <a href="product.html">Read more</a>
-            </article>
-            <article class="product sale soldout">
-                <img src="img/1533.webp" alt="">
-                <h3>Puma t-shirt, red</h3>
-                <p class="subtle">T-shirts | Puma</p>
-                <p class="price">Prev, DKK 400,-</p>
-                <div class="price_down">
-                    <p>Now DKK 200,-</p>
-                    <p>-50%</p>
-                </div>
-                <a href="product.html">Read more</a>
-            </article>
-        </div>
+        </template>
     </main>
+    <script src="productlist.js"></script>
 </body>
 
 </html>
