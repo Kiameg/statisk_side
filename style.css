@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Graduate&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ header ul {
   justify-content: end;
   font-size: 1.5rem;
   list-style-type: none;
+  font-family: "Graduate", cursive;
 }
 
 body {
@@ -16,6 +18,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 14rem;
+  background-color: rgb(62, 97, 102);
+  font-family: "Graduate", cursive;
 }
 
 img {
@@ -26,13 +30,46 @@ img {
 
 a {
   text-decoration: none;
+  color: black;
 }
+
+a:hover {
+  color: rgb(86, 180, 168);
+}
+
+/*********index**********/
+.body_index {
+  background-image: url(img/forside.webp);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1200px 1fr;
+  grid-template-areas: "main header";
+}
+
+.body_index header {
+  grid-area: header;
+}
+
+.body_index main {
+  grid-area: main;
+}
+
+.index_liste ul {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 4rem;
+}
+
 /*********product**********/
 
 .breadcrumbs {
   display: flex;
   list-style-type: none;
   gap: 2rem;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .purchasebox h3 {
@@ -50,18 +87,28 @@ label {
 }
 .purchasebox {
   background-color: lightgray;
-  margin-right: 10rem;
   padding: 2rem;
   max-width: 20rem;
+  grid-area: purchase;
 }
 
 .purchase_info {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "infoimg infobox"
+    "infoimg purchase";
 }
+
 .info {
-  order: -1;
+  grid-area: infobox;
+  font-size: 1.5rem;
 }
+
+.purchase_info img {
+  grid-area: infoimg;
+}
+
 dd {
   margin-left: 1rem;
 }
@@ -76,8 +123,6 @@ dd {
 .product {
   display: flex;
   flex-direction: column;
-  border: solid 2px red;
-  border-radius: 1%;
 }
 
 .price_down {
@@ -87,7 +132,7 @@ dd {
 
 .price_down p:last-child {
   padding: 0.2rem;
-  background-color: red;
+  background-color: rgb(255, 230, 1);
 }
 
 .soldout::before {
@@ -109,6 +154,11 @@ h1 {
   margin-bottom: 4rem;
 }
 
+.back {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
 /*********category**********/
 .category {
   display: grid;
@@ -118,7 +168,8 @@ h1 {
 }
 
 .category a {
-  padding: 1em 2em;
-  background-color: rgb(93, 93, 255);
+  padding: 1.3em 2em;
+  background-color: rgb(93, 135, 141);
   text-decoration: none;
+  border-radius: 15px;
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 172">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 30.34px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #66bdc4;
+        font-family: Graduate-Regular, Graduate;
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        font-size: 26.09px;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(11.33 59.79)"><tspan x="0" y="0">Sport</tspan></text>
+  <text class="cls-2" transform="translate(92.21 83.83)"><tspan x="0" y="0">United</tspan></text>
+</svg>

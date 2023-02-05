@@ -1,5 +1,5 @@
 const fil = `https://kea-alt-del.dk/t7/api/products`;
-const imagePath = `https://kea-alt-del.dk/t7/images/webp/640//.webp`;
+const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/1163.webp`;
 
 function fetchData() {
   fetch(fil)
