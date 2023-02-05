@@ -1,5 +1,4 @@
-const fil = `https://kea-alt-del.dk/t7/api/products`;
-const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/1163.webp`;
+const fil = `https://kea-alt-del.dk/t7/api/products?limit=20`;
 
 function fetchData() {
   fetch(fil)
@@ -7,16 +6,18 @@ function fetchData() {
     .then(showData);
 }
 
-const temp = document.querySelector("#producttemplate").content;
+const temp = document.querySelector("#smallproductTemplate").content;
 const main = document.querySelector("main");
 
-function showData(json) {
-  json.forEach((products) => {
+function showData(data) {
+  data.forEach((object) => {
     const klon = temp.cloneNode(true);
-    klon.querySelector("#pic").src = products.imagePath;
-    klon.querySelector("#name").textContent = products.productdisplayname;
-    klon.querySelector("#brand").textContent = products.brandname;
-    klon.querySelector("#price").textContent = products.price;
+    const produktid = object.id;
+    const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${produktid}.webp`;
+
+    klon.querySelector("img").src = object.imagePath;
+    klon.querySelector("h3").textContent = object.productdisplayname;
+    klon.querySelector(".price").textContent = object.price;
     main.appendChild(klon);
   });
 }
