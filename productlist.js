@@ -12,12 +12,19 @@ const main = document.querySelector("main");
 function showData(data) {
   data.forEach((object) => {
     const klon = temp.cloneNode(true);
-    const produktid = object.id;
-    const imagePath = `https://kea-alt-del.dk/t7/images/webp/640/${produktid}.webp`;
 
-    klon.querySelector("img").src = object.imagePath;
+    klon.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${object.id}.webp`;
     klon.querySelector("h3").textContent = object.productdisplayname;
     klon.querySelector(".price").textContent = object.price;
+
+    if (object.soldout) {
+      klon.querySelector("article").classList.add("soldOut");
+    }
+
+    if (object.discount) {
+      klon.querySelector("article").classList.add("sale");
+    }
+
     main.appendChild(klon);
   });
 }

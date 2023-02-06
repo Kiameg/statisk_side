@@ -114,10 +114,26 @@ dd {
 }
 
 /**********productlist**********/
-.soldout img {
-  opacity: 0.5;
+
+.productlist article .discount,
+.productlist article .price span {
+  display: none;
 }
-.product_con article h3 {
+
+.productlist article.sale .discount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productlist article.sale .price span {
+  display: initial;
+}
+
+.productlist article {
+  margin-bottom: 1rem;
+}
+
+.product article h3 {
   flex-grow: 3;
 }
 .product {
@@ -125,17 +141,17 @@ dd {
   flex-direction: column;
 }
 
-.price_down {
+.discount {
   display: flex;
   justify-content: space-between;
 }
 
-.price_down p:last-child {
-  padding: 0.2rem;
+.discount p:last-child {
+  padding: 1px;
   background-color: rgb(255, 230, 1);
 }
 
-.soldout::before {
+.soldOut::before {
   content: "Sold Out";
   position: absolute;
   background: lightgray;
@@ -143,7 +159,15 @@ dd {
   padding: 1rem;
 }
 
-.product_con {
+.soldOut::after {
+  content: "Sold Out";
+  position: absolute;
+  padding: 1rem;
+  background-color: rgb(86, 180, 168);
+  color: white;
+}
+
+.product_grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
   gap: 3em;
