@@ -17,7 +17,7 @@ body {
   padding: 4em 6em;
   display: flex;
   flex-direction: column;
-  gap: 14rem;
+  gap: 10rem;
   background-color: rgb(62, 97, 102);
   font-family: "Graduate", cursive;
 }
@@ -37,11 +37,21 @@ a:hover {
   color: rgb(86, 180, 168);
 }
 
+.logo {
+  display: block;
+  max-width: 30%;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
 /*********index**********/
 .body_index {
   background-image: url(img/forside.webp);
   background-repeat: no-repeat;
   display: grid;
+  gap: 14rem;
   grid-template-columns: 1200px 1fr;
   grid-template-areas: "main header";
 }
@@ -191,9 +201,6 @@ dd {
   justify-content: center;
 }
 
-h1 {
-  margin-bottom: 4rem;
-}
 .subtle {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
