@@ -20,6 +20,7 @@ function showData(data) {
     klon.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${object.id}.webp`;
     klon.querySelector("h3").textContent = object.productdisplayname;
     klon.querySelector(".price").textContent = object.price;
+    klon.querySelector(".type").textContent = object.articletype;
     klon.querySelector(".rabat").textContent = object.discount + "%";
     klon.querySelector("a").href = "product.html?id=" + object.id;
 
