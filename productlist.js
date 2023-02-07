@@ -16,13 +16,17 @@ function showData(data) {
     klon.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${object.id}.webp`;
     klon.querySelector("h3").textContent = object.productdisplayname;
     klon.querySelector(".price").textContent = object.price;
+    klon.querySelector(".rabat").textContent = object.discount + "%";
+    klon.querySelector("a").href = "product.html?id=" + object.id;
 
     if (object.soldout) {
       klon.querySelector("article").classList.add("soldOut");
     }
 
     if (object.discount) {
+      klon.querySelector(".nowprice").textContent = "Now " + `${Math.round(object.price - (object.price * object.discount) / 100)} DKK`;
       klon.querySelector("article").classList.add("sale");
+      klon.querySelector(".nowprice").classList.add("sale");
     }
 
     main.appendChild(klon);

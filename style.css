@@ -88,7 +88,9 @@ label {
 .purchasebox {
   background-color: lightgray;
   padding: 2rem;
-  max-width: 20rem;
+  max-height: 60%;
+  max-width: 60%;
+  margin-left: 1rem;
   grid-area: purchase;
 }
 
@@ -103,6 +105,18 @@ label {
 .info {
   grid-area: infobox;
   font-size: 1.5rem;
+  margin-left: 1rem;
+}
+h2 {
+  margin-bottom: 2rem;
+}
+dd {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
 }
 
 .purchase_info img {
@@ -142,13 +156,16 @@ dd {
 }
 
 .discount {
-  display: flex;
-  justify-content: space-between;
+  display: none;
 }
 
 .discount p:last-child {
   padding: 1px;
   background-color: rgb(255, 230, 1);
+}
+
+.soldOut {
+  opacity: 0.5;
 }
 
 .soldOut::before {
@@ -176,6 +193,18 @@ dd {
 
 h1 {
   margin-bottom: 4rem;
+}
+.subtle {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  margin-bottom: 0.5rem;
+}
+.nowprice {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
 }
 
 .back {
